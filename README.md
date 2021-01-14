@@ -39,7 +39,7 @@
 
    vii) Open anaconda prompt terminal.
 
-  viii) Navigate to the folder where the above files are present and enter the below set of commands in sequential manner(make sure you have git CLI installed incase of               windows OS:
+    viii) Navigate to the folder where the above files are present and enter the below set of commands in sequential manner(make sure you have git CLI installed incase of               windows OS:
 
         git init
 
