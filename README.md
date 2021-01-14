@@ -40,12 +40,19 @@
    vii) Open anaconda prompt terminal.
 
   viii) Navigate to the folder where the above files are present and enter the below set of commands in sequential manner(make sure you have git CLI installed incase of               windows OS:
+
         git init
+
         git add .
+
         git commit -m"this is my project"
+
         heroku login (make sure you have created Heroku account before executing this command)
+
         heroku create
+
         git remote -v
+
         git push heroku master
         
    Follow the above steps for succesfull deployment of web application onto cloud server.     
