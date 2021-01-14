@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Loan Foreclosure</title>
+    </head>
+
+<style>
+
+
+input[type=text], select {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-weight: bolder;
+}
+
+input[type=submit] {
+  width: 80%;
+  background-color: lightgreen;
+  color:black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size:100;
+  font-weight: bolder;
+}
+
+
+input[type=submit]:hover {
+  background-color: orangered;
+}
+form{
+    border-radius: 10px;
+    padding-top: 5%;
+    font-weight: bolder;
+}
+div {
+ 
+  border-radius: 5px;
+  margin-left: 2.5em;
+  width: 30%;
+  
+}
+h1{
+    color: DarkYellow;
+    font-size: 40px;
+    font-weight: bolder;
+}
+h3{
+  color: white;
+}
+
+body {
+            
+            background-image: url("static/img/Foreclosure.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            padding: 0px;
+        }
+       
+</style>
+
+<body>
+
+<h1>Loan Foreclosure Prediction</h1>
+
+<div>
+<form action="{{ url_for('predict')}}" method="post" >
+<label for="BALANCE_TENURE" class="text-info">Remaining Tenure</label>
+<input type="text" id="BALANCE_TENURE" name="BALANCE_TENURE" placeholder="100" required="required">
+<label for="COMPLETED_TENURE">Completed Tenure</label><br>
+<input type="text" id="COMPLETED_TENURE" name="COMPLETED_TENURE" placeholder="55" required="required"><br>
+<label for="CURRENT_INTEREST_RATE_CHANGES">No of times ROI changed</label><br>
+<input type="text" id="CURRENT_INTEREST_RATE_CHANGES" name="CURRENT_INTEREST_RATE_CHANGES" placeholder="15" required="required"><br>
+<label for="DIFF_EMI_AMOUNT_MAX_MIN">Diff b/w Max and Min EMI</label><br>
+<input type="text" id="DIFF_EMI_AMOUNT_MAX_MIN" name="DIFF_EMI_AMOUNT_MAX_MIN" placeholder="350" required="required"><br>
+<label for="DIFF_ORIGINAL_CURRENT_TENOR">Diff in Original and Current Tenor</label><br>
+<input type="text" id="DIFF_ORIGINAL_CURRENT_TENOR" name="DIFF_ORIGINAL_CURRENT_TENOR" placeholder="1230" required="required"><br>
+<label for="FOIR">Debt to Income Ratio(value should range from 0-1)</label><br>
+<input type="text" id="FOIR" name="FOIR" placeholder="0.7" required="required"><br>
+<label for="LAST_RECEIPT_AMOUNT">Last Receipt Amount</label><br>
+<input type="text" id="LAST_RECEIPT_AMOUNT" name="LAST_RECEIPT_AMOUNT" placeholder="2500" required="required"><br>
+<label for="NET_LTV">Loan-to-Value Ratio(value should range from 0-1)</label><br>
+<input type="text" id="NET_LTV" name="NET_LTV" placeholder="0.6" required="required"><br>
+<label for="NET_RECEIVABLE">Net Receivable(Amount owed by Customer)</label><br>
+<input type="text" id="NET_RECEIVABLE" name="NET_RECEIVABLE" placeholder="24000" required="required"><br>
+<label for="NUM_EMI_CHANGES">No of times EMIs changed</label><br>
+<input type="text" id="NUM_EMI_CHANGES" name="NUM_EMI_CHANGES" placeholder="5" required="required"><br>
+<label for="NUM_LOW_FREQ_TRANSACTIONS">No of Transactions done in less than 28 days</label><br>
+<input type="text" id="NUM_LOW_FREQ_TRANSACTIONS" name="NUM_LOW_FREQ_TRANSACTIONS" placeholder="7" required="required"><br>
+<label for="OUTSTANDING_PRINCIPAL">Outstanding Principal</label><br>
+<input type="text" id="OUTSTANDING_PRINCIPAL" name="OUTSTANDING_PRINCIPAL" placeholder="15000" required="required"><br>
+<label for="PAID_INTEREST">Paid Interest</label><br>
+<input type="text" id="PAID_INTEREST" name="PAID_INTEREST" placeholder="1300" required="required"><br>
+<label for="PAID_PRINCIPAL">Paid Principal</label><br>
+<input type="text" id="PAID_PRINCIPAL" name="PAID_PRINCIPAL" placeholder="1200" required="required"><br>
+
+
+<label for="PRODUCT">Loan Product</label><br>
+<select id="PRODUCT" name="PRODUCT">
+      <option value="LAP">LAP - Loan Against Property</option>
+      <option value="STHL">STHL - Short Term Home Loan</option>
+      <option value="STLAP">STLAP - Short Term LAP</option>
+	  <option value="HL">HL - Home Loan</option>
+    </select><br>
+
+
+<input class="center-block" type="submit" value="Predict Foreclosure" >
+</form>
+</div>
+
+    
+<!-- the predicted text -->
+<!-- <h1 style="color:blue;">{{ prediction_text }}</h1>-->
+
+</body>
+</html>
