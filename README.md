@@ -26,12 +26,19 @@
    <b>How to run the application:</b>
    
      i) Open this repository as folder in Pycharm in your local system.
+
     ii) Create new environment for this project, select python version as 3.6
+
    iii) Once conda environment is created, do <b>pip install -r requirements.txt</b> in pycharm terminal.
+
     iv) After that click on app.py and run the application.
+
      v) If everything goes fine, then this app will run in your local machine.
+
     vi) Now we have deploy this application on cloud server, i.e Heroku server.
+
    vii) Open anaconda prompt terminal.
+
   viii) Navigate to the folder where the above files are present and enter the below set of commands in sequential manner(make sure you have git CLI installed incase of               windows OS:
         git init
         git add .
