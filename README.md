@@ -10,14 +10,14 @@
    
    i) <b>templates & static</b>: This is contains html files which are part of Frontend development (UI), this basically deals with the aesthetic look of web app.
    
-  ii) <b>Procfile</b>: This contains the command to run the web application once deployed on the server.
+   ii) <b>Procfile</b>: This contains the command to run the web application once deployed on the server.
    
- iii) <b>NBFC_Loan_Foreclosure.ipynb</b> : This is a jupyter notebook file which contains the EDA, feature engineering and model building part.
+   iii) <b>NBFC_Loan_Foreclosure.ipynb</b> : This is a jupyter notebook file which contains the EDA, feature engineering and model building part.
  
-  iv) <b>RFModel.sav</b>: This the pickle file which contains the Random forest model which is used for Foreclosure prediction.
+   iv) <b>RFModel.sav</b>: This the pickle file which contains the Random forest model which is used for Foreclosure prediction.
   
-   v) <b>Scalar.sav</b>: This file is used to scale the input values at the backend which are entered by user in the application.
+    v) <b>Scalar.sav</b>: This file is used to scale the input values at the backend which are entered by user in the application.
    
-  vi) <b>app.py</b>: This is backend part of the web application which gives output/prediction for the values entered by user.
+   vi) <b>app.py</b>: This is backend part of the web application which gives output/prediction for the values entered by user.
   
- vii) <b>requirements.txt</b>: This file contains all required libararies which are necessary to run the application.
+  vii) <b>requirements.txt</b>: This file contains all required libararies which are necessary to run the application.
